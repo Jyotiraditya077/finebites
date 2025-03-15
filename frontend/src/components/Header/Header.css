@@ -1,0 +1,101 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 34vw;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+/* Slick carousel adjustments */
+.carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full area */
+}
+
+/* Dark overlay for better text visibility */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Increased darkness for better readability */
+}
+
+/* Header contents */
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    color: white;
+    z-index: 2; /* Lower z-index to appear below LoginPopup */
+}
+
+.header-contents h2 {
+    font-weight: 600;
+    font-size: max(4.5vw, 22px);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Added text shadow for better contrast */
+}
+
+.header-contents p {
+    font-size: 1vw;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3); /* Enhanced contrast */
+}
+
+/* Buttons styling */
+.header-contents button,
+.header-contents a.button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.header-contents a.button:hover,
+.header-contents button:hover {
+    background-color: #f7f7f7;
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries */
+@media (max-width: 1050px) {
+    .header {
+        height: 38vw;
+    }
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        max-width: 55%;
+    }
+    .header-contents p {
+        display: none;
+    }
+    .header-contents button,
+    .header-contents a.button {
+        padding: 2vw 4vw;
+    }
+}

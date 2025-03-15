@@ -1,0 +1,185 @@
+/* Contact Us Page Styles */
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .contact-box {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Back Button */
+  .back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s;
+  }
+  
+  .back-btn:hover {
+    color: #000;
+  }
+  
+  /* Header */
+  .contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .contact-header p {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Messages */
+  .error-msg, .success-msg {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .error-msg {
+    background: #ffe5e5;
+    color: #d9534f;
+  }
+  
+  .success-msg {
+    background: #e6ffea;
+    color: #28a745;
+  }
+  
+  /* Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* First Name & Last Name Fields */
+  .input-group-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px; /* Increased spacing to avoid overlapping */
+  }
+  
+  .input-group-row input {
+    flex: 1;
+    padding: 62px 16px; /* Ensures no overlap inside the input */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .input-group-row input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+  }
+  
+  /* Input & Icons */
+  .input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group .icon {
+    position: absolute;
+    left: 12px;
+    color: #888;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+  }
+  
+  /* Textarea */
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+    resize: none;
+  }
+  
+  textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #1d4ed8;
+  }
+  
+  .submit-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  /* Loading Animation */
+  .loading-icon {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
