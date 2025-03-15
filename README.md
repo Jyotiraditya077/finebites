@@ -1,5 +1,7 @@
 # FineBites
 
+![FineBites Logo](https://raw.githubusercontent.com/your-username/your-repo/main/assets/logo.png)
+
 FineBites is a modern food delivery web application designed to offer a seamless experience for users to browse, order food, and manage their meals efficiently. It features a responsive UI, secure authentication, and smooth payment integration using Stripe.
 
 ## Table of Contents
@@ -96,6 +98,7 @@ The frontend runs at `http://localhost:5173`.
 Create a `.env` file inside the `backend/` directory and add the following variables:
 
 ```env
+PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 STRIPE_SECRET_KEY=your_stripe_secret_key
