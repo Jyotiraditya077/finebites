@@ -1,6 +1,6 @@
 # FineBites
 
-![FineBites Logo](https://raw.githubusercontent.com/your-username/your-repo/main/assets/logo.png)
+![FineBites Logo](https://github.com/Jyotiraditya077/finebites/blob/main/frontend/src/assets/logo.png)
 
 FineBites is a modern food delivery web application designed to offer a seamless experience for users to browse, order food, and manage their meals efficiently. It features a responsive UI, secure authentication, and smooth payment integration using Stripe.
 
