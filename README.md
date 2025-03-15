@@ -82,14 +82,14 @@ npm install
 ### 1️⃣ Start the Backend Server  
 ```bash
 cd backend
-npm start
+npm run server
 ```
 The backend runs at `http://localhost:3000`.
 
 ### 2️⃣ Start the Frontend Application  
 ```bash
 cd ../frontend
-npm start
+npm run dev
 ```
 The frontend runs at `http://localhost:5173`.
 
