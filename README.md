@@ -75,6 +75,12 @@ cd ../backend
 npm install
 ```
 
+#### Admin
+```bash
+cd ../admin
+npm install
+```
+
 ---
 
 ## Usage
@@ -92,6 +98,13 @@ cd ../frontend
 npm run dev
 ```
 The frontend runs at `http://localhost:5173`.
+
+### 3️⃣ Start the Admin Application
+```bash
+cd ../admin
+npm run dev
+```
+The admin runs at `http://localhost:5174`.
 
 ---
 
