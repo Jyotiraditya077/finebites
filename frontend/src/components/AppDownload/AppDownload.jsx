@@ -1,7 +1,5 @@
 import React from 'react'
 import './AppDownload.css'
-import { assets } from '../../assets/assets'
-import Carousel from './carousel'
 import ScrollVelocity from './ScrollVelocity';
 
 const AppDownload = () => {
