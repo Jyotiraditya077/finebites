@@ -9,12 +9,12 @@ const LoginPopup = ({ setShowLogin }) => {
 
     const { setToken, url, loadCartData } = useContext(StoreContext)
     const [currState, setCurrState] = useState("Sign Up");
-
     const [data, setData] = useState({
         name: "",
         email: "",
         password: ""
     })
+    const [loading, setLoading] = useState(false);
 
     const onChangeHandler = (event) => {
         const name = event.target.name
@@ -24,6 +24,7 @@ const LoginPopup = ({ setShowLogin }) => {
 
     const onLogin = async (e) => {
         e.preventDefault()
+        setLoading(true);
 
         let new_url = url;
         if (currState === "Login") {
@@ -33,6 +34,7 @@ const LoginPopup = ({ setShowLogin }) => {
             new_url += "/api/user/register"
         }
         const response = await axios.post(new_url, data);
+        setLoading(false);
         if (response.data.success) {
             setToken(response.data.token)
             localStorage.setItem("token", response.data.token)
@@ -55,7 +57,17 @@ const LoginPopup = ({ setShowLogin }) => {
                     <input name='email' onChange={onChangeHandler} value={data.email} type="email" placeholder='Your email' />
                     <input name='password' onChange={onChangeHandler} value={data.password} type="password" placeholder='Password' required />
                 </div>
-                <button>{currState === "Login" ? "Login" : "Create account"}</button>
+                <button type="submit" disabled={loading} className="login-button">
+                    {loading ? (
+                        <div className="spinner-border" role="status">
+                        <span className="visually-hidden"></span>
+                        </div>
+                    ) : (
+                        <span>
+                        {currState === "Login" ? "Login" : "Create account"}
+                        </span>
+                    )}
+                </button>
                 <div className="login-popup-condition">
                     <input type="checkbox" name="" id="" required />
                     <p>By continuing, i agree to the terms of use & privacy policy.</p>
