@@ -116,6 +116,10 @@ Create a `.env` file inside the `backend/` directory and add the following varia
 
 JWT_SECRET=your_jwt_secret_key
 STRIPE_SECRET_KEY=your_stripe_secret_key
+CLOUD_NAME=your_cloud_name
+API_KEY=your_api_key
+API_SECRET=your_api_secret
+MONGO_URL=your_mongo_url
 ```
 (Replace placeholders with actual values.)
 
