@@ -40,12 +40,9 @@ const listFood = async (req, res) => {
 // Remove food item
 const removeFood = async (req, res) => {
   try {
-    const { id } = req.params;
+    const {id } = req.params;
     const food = await foodModel.findByIdAndDelete(id);
 
-    if (!food) {
-      return res.status(404).json({ success: false, message: "Food item not found" });
-    }
 
 
     const publicId = food.image.split('/').pop().split('.')[0]; // Extracting public ID from URL

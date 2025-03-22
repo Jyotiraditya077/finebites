@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
-
+const MongoURI=process.env.MONGO_URL;
 export const  connectDB = async () =>{
 
-    await mongoose.connect('mongodb+srv://jyotiradityaswain654:cakesite@cake-site.sllqu.mongodb.net/cake-site').then(()=>console.log("DB Connected"));
+    await mongoose.connect(MongoURI).then(()=>console.log("DB Connected"));
    
 }
 
